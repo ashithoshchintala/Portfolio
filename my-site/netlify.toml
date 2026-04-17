@@ -1,0 +1,12 @@
+[build]
+  # This tells Netlify exactly where to find the code
+  base = "my-site"
+  # This tells Netlify what command to run
+  command = "npm run build"
+  # This tells Netlify where the finished site files are
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
