@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { GraduationCap, MapPin, Award, ChevronRight } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const education = [
   {
@@ -81,6 +82,13 @@ const EducationSection = () => {
 
   return (
     <section id="education" className="edu-section">
+      <ParticleBackground
+        particleColor="rgba(129, 140, 248, 0.5)"
+        lineColor="rgba(129, 140, 248, 0.12)"
+        particleCount={35}
+        connectDistance={130}
+        speed={0.25}
+      />
       <div className="edu-glow edu-glow-1" />
       <div className="edu-glow edu-glow-2" />
 

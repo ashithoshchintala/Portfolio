@@ -1,6 +1,7 @@
 import React, { useRef, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Cpu } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const skills = [
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', orbit: 1, category: 'Languages' },
@@ -17,10 +18,10 @@ const skills = [
 ];
 
 const categories = [
-  { title: 'Languages', items: ['Python', 'C++', 'JavaScript', 'SQL', 'Bash'] },
+  { title: 'Languages', items: ['Python', 'C++', 'SQL', 'Bash'] },
   { title: 'Libraries', items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV'] },
-  { title: 'Databases', items: ['MySQL', 'MongoDB', 'PostgreSQL'] },
-  { title: 'Tools', items: ['Git / GitHub', 'Docker', 'AWS', 'Power BI', 'Jupyter'] },
+  { title: 'Databases', items: ['MySQL', 'MongoDB'] },
+  { title: 'Tools', items: ['Git / GitHub', 'Power BI', 'Jupyter'] },
 ];
 
 const SkillsOrbit = () => {
@@ -52,6 +53,13 @@ const SkillsOrbit = () => {
 
   return (
     <section id="skills" className="orbit-section">
+      <ParticleBackground
+        particleColor="rgba(0, 200, 200, 0.35)"
+        lineColor="rgba(139, 92, 246, 0.08)"
+        particleCount={30}
+        connectDistance={120}
+        speed={0.18}
+      />
       <div className="orbit-glow orbit-glow-1" />
       <div className="orbit-glow orbit-glow-2" />
 

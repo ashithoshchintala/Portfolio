@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin, ExternalLink, GitBranch, Send } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 const contactLinks = [
   { icon: Mail,         label: 'Email',    value: 'ashithoshchintala111@gmail.com',     href: 'mailto:ashithoshchintala111@gmail.com' },
@@ -27,6 +28,13 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="contact-section" ref={sectionRef}>
+      <ParticleBackground
+        particleColor="rgba(139, 92, 246, 0.35)"
+        lineColor="rgba(99, 102, 241, 0.08)"
+        particleCount={25}
+        connectDistance={110}
+        speed={0.15}
+      />
       <div className="contact-glow contact-glow-1" />
       <div className="contact-glow contact-glow-2" />
 

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState, Suspense } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ExternalLink, Award } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 // ─── Error Boundary ─────────────────────────────────────────────────────────
 class SplineErrorBoundary extends React.Component {
@@ -197,6 +198,13 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="proj-section">
+      <ParticleBackground
+        particleColor="rgba(168, 85, 247, 0.4)"
+        lineColor="rgba(168, 85, 247, 0.1)"
+        particleCount={35}
+        connectDistance={130}
+        speed={0.22}
+      />
       <div className="proj-glow proj-glow-1" />
       <div className="proj-glow proj-glow-2" />
 

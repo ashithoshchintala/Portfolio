@@ -3,9 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { id: 'hero', label: 'Home' },
+  { id: 'summary', label: 'Summary' },
   { id: 'education', label: 'Education' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
+  { id: 'certifications', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -49,19 +51,22 @@ const Navbar = () => {
     <AnimatePresence>
       {visible && (
         <motion.nav
-          initial={{ y: -60, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ y: -60, opacity: 0, scale: 0.9 }}
+          animate={{ y: 0, opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="navbar"
         >
           {navItems.map(({ id, label }) => (
-            <button
+            <motion.button
               key={id}
               onClick={() => scrollTo(id)}
               className={`navbar-btn ${active === id ? 'navbar-btn-active' : ''}`}
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 20 }}
             >
               {label}
-            </button>
+            </motion.button>
           ))}
         </motion.nav>
       )}

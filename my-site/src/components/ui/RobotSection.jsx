@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState, Suspense } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Briefcase, Calendar, MapPin, ExternalLink, GitBranch, Award } from 'lucide-react';
+import ParticleBackground from './ParticleBackground';
 
 // ─── Animated neural network canvas (replaces Spline for reliability) ────────
 const NeuralCanvas = () => {
@@ -178,6 +179,13 @@ const RobotSection = () => {
 
   return (
     <section id="experience" className="robot-section">
+      <ParticleBackground
+        particleColor="rgba(167, 139, 250, 0.45)"
+        lineColor="rgba(139, 92, 246, 0.1)"
+        particleCount={30}
+        connectDistance={120}
+        speed={0.2}
+      />
       <div className="robot-glow robot-glow-left" />
       <div className="robot-glow robot-glow-right" />
       <div className="robot-grid-overlay" />
