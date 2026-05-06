@@ -23,15 +23,6 @@ const certifications = [
     icon: '🤖',
   },
   {
-    issuer: 'Antigravity',
-    title: 'Theoretical Propulsion & Gravimetrics',
-    date: 'Ongoing',
-    description: 'Developed a comprehensive understanding of theoretical propulsion and gravimetric manipulation, exploring advanced physics concepts to challenge traditional aerodynamic constraints.',
-    link: null,
-    color: '#06b6d4',
-    icon: '🚀',
-  },
-  {
     issuer: 'FreeCodeCamp',
     title: 'Data Analysis With Python',
     date: '10 Jul 2024',
