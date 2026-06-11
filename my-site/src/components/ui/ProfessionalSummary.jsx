@@ -93,19 +93,18 @@ const ProfessionalSummary = () => {
             >
               <h3 className="summary-card-heading">About Me</h3>
               <p className="summary-text">
-                I'm Ashithosh Chintala, a results-driven professional specializing in
-                Data Science and Machine Learning. With a strong technical foundation
-                and hands-on experience in building noise-resilient environmental
-                sound classification models and optimizing medical imaging through
-                genetic algorithms, I am eager to apply my expertise to solve complex
-                real-world challenges.
+                Results-driven Data Analyst and AI/ML Engineer with expertise in
+                data analysis, machine learning, deep learning, NLP, and
+                Explainable AI (XAI). Skilled in building predictive models, data
+                pipelines, real-time analytics dashboards, and data visualization
+                solutions. Strong foundation in data governance, business
+                intelligence, and data-driven decision-making.
               </p>
               <p className="summary-text">
-                My journey in data science is defined by a passion for extracting
-                actionable insights and developing innovative AI solutions. I have
-                developed proficiency in Python, SQL, and deep learning frameworks
-                through rigorous academic projects and professional certifications.
-                My goal is to join a forward-thinking team where I can contribute to
+                IEEE-published researcher pursuing an Online M.Tech in Artificial
+                Intelligence and Data Science at IIT Patna, with a strong interest
+                in transforming complex data into actionable business insights. My
+                goal is to join a forward-thinking team where I can contribute to
                 cutting-edge research and data-driven development.
               </p>
             </motion.div>
@@ -158,6 +157,26 @@ const ProfessionalSummary = () => {
                 <ExternalLink className="h-3.5 w-3.5" />
                 <span>View on IEEE Xplore</span>
               </a>
+            </motion.div>
+
+            {/* ICSCSS 2025 Publication */}
+            <motion.div
+              custom={3}
+              variants={fadeUp}
+              initial="hidden"
+              animate={isInView ? 'visible' : 'hidden'}
+              className="summary-card summary-publication-card"
+            >
+              <div className="summary-pub-badge">
+                <BookOpen className="h-3.5 w-3.5" />
+                <span>ICSCSS 2025 Publication</span>
+              </div>
+              <h3 className="summary-pub-title">
+                Enhancing Medical Images through Adaptive Genetic Algorithm-driven Histogram Equalization
+              </h3>
+              <p className="summary-text summary-pub-desc">
+                Accepted for plenary presentation at ICSCSS 2025, Hindusthan College of Engineering and Technology, Tamil Nadu. This work proposes an image optimization framework using evolutionary optimization to improve contrast in low-quality medical scans.
+              </p>
             </motion.div>
           </div>
 

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import AetherFlowHero from '@/components/ui/aether-flow-hero';
 import Navbar from '@/components/ui/Navbar';
+import ExperienceSection from '@/components/ui/ExperienceSection';
 import EducationSection from '@/components/ui/EducationSection';
 import ProfessionalSummary from '@/components/ui/ProfessionalSummary';
 import ProjectsSection from '@/components/ui/ProjectsSection';
@@ -63,6 +64,11 @@ const LandingPage = () => {
 
       {/* Page 2: Professional Summary */}
       <ProfessionalSummary />
+
+      <ScrollTransition />
+
+      {/* Page 2.5: Work Experience */}
+      <ExperienceSection />
 
       <ScrollTransition />
 

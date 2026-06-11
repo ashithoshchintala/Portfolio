@@ -5,23 +5,25 @@ import ParticleBackground from './ParticleBackground';
 
 const skills = [
   { name: 'Python', icon: 'https://cdn.simpleicons.org/python/3776AB', orbit: 1, category: 'Languages' },
-  { name: 'TensorFlow', icon: 'https://cdn.simpleicons.org/tensorflow/FF6F00', orbit: 1, category: 'Libraries' },
-  { name: 'OpenCV', icon: 'https://cdn.simpleicons.org/opencv/5C3EE8', orbit: 1, category: 'Libraries' },
-  { name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas/E70488', orbit: 1, category: 'Libraries' },
-  { name: 'Scikit-learn', icon: 'https://cdn.simpleicons.org/scikitlearn/F7931E', orbit: 1, category: 'Libraries' },
-  { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/white', orbit: 1, category: 'Tools' },
+  { name: 'TensorFlow', icon: 'https://cdn.simpleicons.org/tensorflow/FF6F00', orbit: 1, category: 'Frameworks' },
+  { name: 'Scikit-learn', icon: 'https://cdn.simpleicons.org/scikitlearn/F7931E', orbit: 1, category: 'Frameworks' },
+  { name: 'Pandas', icon: 'https://cdn.simpleicons.org/pandas/E70488', orbit: 1, category: 'Tools' },
+  { name: 'NumPy', icon: 'https://cdn.simpleicons.org/numpy/013243', orbit: 1, category: 'Tools' },
+  { name: 'OpenCV', icon: 'https://cdn.simpleicons.org/opencv/5C3EE8', orbit: 1, category: 'Frameworks' },
+  { name: 'Streamlit', icon: 'https://cdn.simpleicons.org/streamlit/FF4B4B', orbit: 1, category: 'Tools' },
   { name: 'C++', icon: 'https://cdn.simpleicons.org/cplusplus/00599C', orbit: 2, category: 'Languages' },
-  { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1', orbit: 2, category: 'Databases' },
-  { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248', orbit: 2, category: 'Databases' },
-  { name: 'PyTorch', icon: 'https://cdn.simpleicons.org/pytorch/EE4C2C', orbit: 2, category: 'Libraries' },
+  { name: 'C', icon: 'https://cdn.simpleicons.org/c/A8B9CC', orbit: 2, category: 'Languages' },
+  { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1', orbit: 2, category: 'Tools' },
   { name: 'Power BI', icon: 'https://img.icons8.com/?size=100&id=Ny0t2MYrJ70p&format=png&color=000000', orbit: 2, category: 'Tools' },
+  { name: 'AWS', icon: 'https://cdn.simpleicons.org/amazonaws/FF9900', orbit: 2, category: 'Cloud' },
+  { name: 'GitHub', icon: 'https://cdn.simpleicons.org/github/white', orbit: 2, category: 'Cloud' },
 ];
 
 const categories = [
-  { title: 'Languages', items: ['Python', 'C++', 'SQL', 'Bash'] },
-  { title: 'Libraries', items: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV'] },
-  { title: 'Databases', items: ['MySQL', 'MongoDB'] },
-  { title: 'Tools', items: ['Git / GitHub', 'Power BI', 'Jupyter'] },
+  { title: 'Programming Languages', items: ['C', 'C++', 'Python'] },
+  { title: 'ML/DL Frameworks', items: ['TensorFlow', 'Scikit-learn', 'XGBoost', 'LightGBM', 'Random Forest', 'SHAP', 'SMOTE', 'OpenCV', 'EfficientNetV2'] },
+  { title: 'Data & Analytics Tools', items: ['Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Streamlit', 'Power BI', 'Jupyter Notebook', 'MySQL', 'SQL Workbench'] },
+  { title: 'Cloud & Infra', items: ['GitHub', 'AWS (S3, EC2)', 'Git bash'] },
 ];
 
 const SkillsOrbit = () => {

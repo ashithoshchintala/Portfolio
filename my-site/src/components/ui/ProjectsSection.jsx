@@ -124,27 +124,35 @@ const SplineScene = () => {
 const projects = [
   {
     title: 'Sound Classification via Time-Frequency Attention',
-    desc: 'Achieved 93.02% accuracy using GradCAM++ and EfficientNetV2 on UrbanSound8K.',
+    desc: 'Spearheaded a groundbreaking noise-resilient environmental sound classification model incorporating Time-Frequency and Framewise Self-Attention mechanisms with GradCAM++ and EfficientNetV2, achieving 93.02% accuracy on UrbanSound8K, outperforming existing methods by 2-3%.',
     accuracy: '93.02%',
-    tags: ['Deep Learning', 'TensorFlow', 'Signal Processing'],
+    tags: ['Deep Learning', 'TensorFlow', 'EfficientNetV2', 'GradCAM++'],
     github: 'https://github.com/ashithoshchintala',
     position: 'top-left',
   },
   {
-    title: 'Zomato Review Sentiment Analysis',
-    desc: 'NLP pipeline for sentiment analysis achieving 80% accuracy with TF-IDF and ensemble classifiers.',
-    accuracy: '80%',
-    tags: ['NLP', 'Scikit-learn', 'Pandas'],
-    github: 'https://github.com/ashithoshchintala',
+    title: 'Real-Time Fraud Detection System',
+    desc: 'Developed an end-to-end fraud detection system utilizing SMOTE for class imbalance handling and SHAP for explainable AI, integrated into a live Streamlit dashboard for real-time risk scoring with 92%+ precision.',
+    accuracy: '92%+',
+    tags: ['Python', 'LightGBM', 'SHAP', 'Streamlit'],
+    github: 'https://github.com/ashithoshchintala/Fraud-Detection-system',
     position: 'top-right',
   },
   {
-    title: 'Medical Image Enhancement (AGAHE)',
-    desc: 'Adaptive Genetic Algorithm for histogram equalization optimizing MRI scan contrast.',
+    title: 'Enhancing Medical Images (AGAHE)',
+    desc: 'Developed and implemented AGAHE, an image enhancement framework using genetic algorithms to optimize histogram equalization, boosting brightness preservation and structural similarity in low-contrast medical images with superior PSNR, entropy, and SSIM.',
     accuracy: null,
-    tags: ['Computer Vision', 'OpenCV', 'Python'],
+    tags: ['Python', 'Machine Learning', 'OpenCV', 'Genetic Algorithms'],
     github: 'https://github.com/ashithoshchintala',
-    position: 'bottom-center',
+    position: 'bottom-left',
+  },
+  {
+    title: 'Zomato Review Sentiment Analysis',
+    desc: 'NLP pipeline for sentiment analysis achieving 80% accuracy with TF-IDF and ensemble classifiers on restaurant review data.',
+    accuracy: '80%',
+    tags: ['NLP', 'Scikit-learn', 'Pandas', 'TF-IDF'],
+    github: 'https://github.com/ashithoshchintala',
+    position: 'bottom-right',
   },
 ];
 
@@ -163,7 +171,7 @@ const FloatingCard = ({ project, index, isInView }) => {
       variants={variants}
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
-      className={`proj-card proj-card-${project.position}`}
+      className="proj-card"
     >
       <div className="proj-card-inner">
         {/* Header */}
@@ -225,6 +233,12 @@ const ProjectsSection = () => {
 
         {/* Robot + floating cards container */}
         <div className="proj-arena">
+          {/* Left Column Projects */}
+          <div className="proj-col">
+            <FloatingCard key={projects[0].title} project={projects[0]} index={0} isInView={isInView} />
+            <FloatingCard key={projects[2].title} project={projects[2]} index={2} isInView={isInView} />
+          </div>
+
           {/* 3D Robot / Neural Canvas center */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -236,10 +250,11 @@ const ProjectsSection = () => {
             <SplineScene />
           </motion.div>
 
-          {/* Floating project cards around the robot */}
-          {projects.map((p, i) => (
-            <FloatingCard key={p.title} project={p} index={i} isInView={isInView} />
-          ))}
+          {/* Right Column Projects */}
+          <div className="proj-col">
+            <FloatingCard key={projects[1].title} project={projects[1]} index={1} isInView={isInView} />
+            <FloatingCard key={projects[3].title} project={projects[3]} index={3} isInView={isInView} />
+          </div>
         </div>
       </div>
     </section>

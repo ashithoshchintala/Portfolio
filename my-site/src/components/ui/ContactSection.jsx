@@ -8,6 +8,7 @@ const contactLinks = [
   { icon: Phone,        label: 'Phone',    value: '+91 8019109347',                     href: 'tel:+918019109347' },
   { icon: ExternalLink, label: 'LinkedIn', value: 'linkedin.com/in/ashithosh-chintala', href: 'https://linkedin.com/in/ashithosh-chintala' },
   { icon: GitBranch,    label: 'GitHub',   value: 'github.com/ashithoshchintala',       href: 'https://github.com/ashithoshchintala' },
+  { icon: ExternalLink, label: 'LeetCode', value: 'leetcode.com/u/ashchin11',           href: 'https://leetcode.com/u/ashchin11/' },
   { icon: MapPin,       label: 'Location', value: 'Hyderabad, Telangana',               href: null },
 ];
 
