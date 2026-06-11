@@ -270,7 +270,7 @@ const AetherFlowHero = ({ onExploreClick }) => {
                     style={{ marginTop: '2.5rem' }}
                 >
                     <a
-                        href="https://www.linkedin.com/in/ashithosh-chintala"
+                        href="https://www.linkedin.com/in/ashithosh-chintala-b386a827b/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-link"
